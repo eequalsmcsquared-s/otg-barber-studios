@@ -6,8 +6,9 @@ Reviewed 24 October 2026.
 
 - Studio interior: owner-uploaded photo in the [OTG Google Business gallery](https://www.google.com/maps?cid=2517071396163621707), January 2025.
 - Studio monogram: cover image from [OTG Instagram](https://www.instagram.com/otgbarberstudio/reel/DIF0cs7P_23/).
-- Skin fade: cover image showing Isley's work, [OTG / Isley post](https://www.instagram.com/cutsby1sley/reel/DW5IdJ1iRqb/).
-- Taper fade and haircut with beard: owner-uploaded photos in the OTG Google Business gallery, April 2024. Matched by visible haircut characteristics; these are examples, not a guarantee of identical results.
+- Skin fade: owner-uploaded April 2024 Google Business photo. Replaced the Instagram reel cover with a sharper 1284 x 1669 original, served at 1200 x 1560.
+- Taper fade: owner-uploaded April 2024 Google Business neckline photo. Replaced the softer side view with a sharper 1284 x 1513 original, served at 1200 x 1414.
+- Haircut with beard: owner-uploaded photo in the OTG Google Business gallery, April 2024. Matched by visible haircut characteristics; these are examples, not a guarantee of identical results.
 - Existing team portraits retained.
 
 All five gallery/service images are stored in this repository as optimized WebP assets. No expiring social-media image URLs are used on the website.

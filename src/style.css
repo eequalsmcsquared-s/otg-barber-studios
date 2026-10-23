@@ -37,3 +37,73 @@ a:focus-visible,button:focus-visible{outline:2px solid #d4ba77;outline-offset:5p
 .barber-card p{padding:0 22px;margin:8px 0 16px}
 .barber-card a{margin:0 22px 23px;margin-top:auto;display:block}
 @media(prefers-reduced-motion:reduce){.barber-card:hover,.barber-card:hover .barber-portrait img{transform:none}}
+
+/* Responsive layout and accessible controls across phone, tablet and desktop. */
+html{scroll-padding-top:24px}
+body{min-width:280px}
+img{max-width:100%}
+.header{gap:20px}
+.header nav{gap:clamp(16px,2.3vw,36px)}
+.header nav a{display:inline-flex;align-items:center;min-height:44px}
+.hero{height:auto;min-height:max(750px,100svh)}
+.hero-content{width:100%;max-width:1200px;padding-bottom:70px}
+.section,.statement,.cta{padding-inline:max(6%,calc((100% - 1440px)/2));opacity:1;transform:none}
+.intro>*{min-width:0}
+.footer-top{grid-template-columns:minmax(100px,2fr) minmax(0,1fr) minmax(0,1fr)}
+footer{padding-inline:max(6%,calc((100% - 1440px)/2))}
+.footer-top a{overflow-wrap:anywhere;min-height:44px;display:flex;align-items:center;margin:4px 0}
+.footer-bottom{gap:20px;flex-wrap:wrap;line-height:1.7}
+.book,.text-link,.underlined,.menu,.barber-card a{min-height:44px;justify-content:center;align-content:center}
+.barber-card a{padding-block:14px}
+.barber-card h3{overflow-wrap:anywhere}
+.skip-link{position:absolute;top:8px;left:8px;z-index:30;transform:translateY(-160%);padding:14px;background:#d4ba77;color:#080808}
+.skip-link:focus{transform:none}
+.booking-open{overflow:hidden}
+#booking-dialog[open]{display:flex;flex-direction:column}
+#booking-dialog{height:min(850px,94vh);height:min(850px,94dvh)}
+.booking-bar{gap:12px;flex:none}
+.booking-bar button{min-width:64px;min-height:44px}
+#booking-dialog iframe{flex:1;min-height:0;height:auto}
+.booking-fallback{flex:none;line-height:1.5}
+.booking-fallback a{display:inline-block;padding-block:8px}
+@media(max-width:1100px){
+.header{height:85px;padding-inline:5%}
+.brand{width:68px;height:68px}
+.header nav{display:none;position:absolute;top:85px;left:0;right:0;background:#10100c;padding:18px 6%;flex-direction:column;gap:4px;border-bottom:1px solid #b99c5645;max-height:calc(100svh - 85px);overflow-y:auto}
+.header nav.open{display:flex}
+.header nav a{padding-block:10px}
+.top-book{display:none}
+.menu{display:block;background:none;border:1px solid #b99c5660;color:#f3ecdd;padding:10px 16px;letter-spacing:.16em;font-size:12px;cursor:pointer}
+.barber-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+.hero{min-height:100svh}
+.hero-content{padding:120px 6% 60px}
+.hero h1{font-size:clamp(42px,11.5vw,68px)}
+.hero-mark{width:130px;height:130px}
+.hero p{line-height:1.6}
+.section{padding-block:64px}
+.intro h2{font-size:clamp(36px,9vw,54px)}
+.barbers h2{font-size:clamp(42px,11vw,66px)}
+.cta h2{font-size:clamp(42px,11vw,66px)}
+.statement h2{font-size:clamp(40px,10vw,60px)}
+.service{grid-template-columns:24px minmax(0,1fr) 36px;gap:8px;padding-block:20px}
+.service strong{grid-column:2;grid-row:1;font-size:23px;line-height:1.25;overflow-wrap:normal}
+.service .number{grid-column:1;grid-row:1}
+.service .price{grid-column:2;grid-row:2;font-size:12px;padding-top:6px}
+.service .arrow{grid-column:3;grid-row:1 / span 2}
+.service:hover{padding-left:0}
+.barber-grid{gap:16px}
+.footer-top{grid-template-columns:1fr;gap:28px;padding-bottom:40px}
+.footer-top img{grid-column:auto}
+.eyebrow,.section-label{line-height:1.7;letter-spacing:.14em}
+#booking-dialog{width:100%;height:100vh;height:100dvh;margin:0;border:0}
+.booking-bar{padding:10px max(12px,env(safe-area-inset-right)) 10px max(12px,env(safe-area-inset-left));font-size:10px;letter-spacing:.06em}
+.booking-fallback{padding-bottom:max(8px,env(safe-area-inset-bottom))}
+}
+@media(max-width:520px){.barber-grid{grid-template-columns:1fr}}
+@media(max-height:500px) and (min-width:601px){
+.hero{min-height:640px}
+#booking-dialog{height:100dvh;margin-block:0}
+}
+@media(hover:none){.book:hover,.barber-card:hover,.barber-card:hover .barber-portrait img{transform:none}}

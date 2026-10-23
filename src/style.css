@@ -107,3 +107,5 @@ footer{padding-inline:max(6%,calc((100% - 1440px)/2))}
 #booking-dialog{height:100dvh;margin-block:0}
 }
 @media(hover:none){.book:hover,.barber-card:hover,.barber-card:hover .barber-portrait img{transform:none}}
+
+.barber-card .instagram-link{margin:0 22px 10px;padding:4px 0;border:0;color:#d4ba77;font-size:12px;letter-spacing:.02em;overflow-wrap:anywhere}.barber-card .instagram-link:hover{text-decoration:underline}

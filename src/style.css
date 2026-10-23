@@ -25,3 +25,15 @@ a:focus-visible,button:focus-visible{outline:2px solid #d4ba77;outline-offset:5p
 @media(max-width:800px){.brand{width:68px;height:68px}.header nav{background:#10100c}}
 .service .arrow{font-size:10px;letter-spacing:.08em;justify-self:end}.service strong{min-width:0;overflow-wrap:anywhere}
 @media(max-width:800px){.service{grid-template-columns:28px minmax(0,1fr) 77px 34px;gap:4px}.service .price{font-size:11px}}
+
+/* Editorial portrait presentation using the OTG team's original photographs. */
+.barber-card{padding:0;overflow:hidden;min-height:0;justify-content:initial;transition:transform .3s ease,box-shadow .3s ease}
+.barber-card:hover{transform:translateY(-5px);box-shadow:0 15px 38px #0003}
+.barber-card .barber-portrait{width:100%;aspect-ratio:4/5;background:#242321;overflow:hidden}
+.barber-card .barber-portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 32%;transition:transform .45s ease}
+.barber-card:hover .barber-portrait img{transform:scale(1.035)}
+.barber-card .barber-number{display:none}
+.barber-card h3{padding:22px 22px 0}
+.barber-card p{padding:0 22px;margin:8px 0 16px}
+.barber-card a{margin:0 22px 23px;margin-top:auto;display:block}
+@media(prefers-reduced-motion:reduce){.barber-card:hover,.barber-card:hover .barber-portrait img{transform:none}}

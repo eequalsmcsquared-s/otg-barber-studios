@@ -13,13 +13,11 @@ document.addEventListener('click',e=>{if(!e.target.closest('.header'))closeMenu(
 matchMedia('(min-width: 1101px)').addEventListener('change',e=>{if(e.matches)closeMenu()});
 if('IntersectionObserver'in window){const ob=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ob.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.section,.statement,.cta').forEach(el=>ob.observe(el))}else document.querySelectorAll('.section,.statement,.cta').forEach(el=>el.classList.add('visible'));
 
-const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 let nameObserver;
-if('IntersectionObserver' in window && !reducedMotion.matches){
+if('IntersectionObserver' in window){
  nameObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('typing-active');nameObserver.unobserve(entry.target)}})},{threshold:0.6});
  document.querySelectorAll('.typing-label,.typing-heading').forEach(el=>nameObserver.observe(el));
 }
-reducedMotion.addEventListener('change',e=>{if(e.matches){nameObserver?.disconnect();document.querySelectorAll('.typing-active').forEach(el=>el.classList.remove('typing-active'))}});
 const galleryPhotos=[{key:'studio-interior',caption:'The studio at 10 Mollett Street',alt:'Black and gold chairs and illuminated mirrors inside OTG Barber Studios'},{key:'studio-monogram',caption:'Only the greatest. The OTG monogram.',alt:'Gold OTG monogram on the studio wall'}];
 document.body.insertAdjacentHTML('beforeend','<dialog class="photo-dialog" aria-labelledby="photo-caption"><div class="photo-toolbar"><span>THE OTG STUDIO</span><button type="button" class="photo-close" aria-label="Close photo">CLOSE</button></div><img class="photo-full" alt=""><div class="photo-controls"><button type="button" class="photo-prev" aria-label="Previous photo">PREVIOUS</button><p id="photo-caption"></p><button type="button" class="photo-next" aria-label="Next photo">NEXT</button></div></dialog>');
 const photoDialog=document.querySelector('.photo-dialog');let photoIndex=0,photoTrigger;

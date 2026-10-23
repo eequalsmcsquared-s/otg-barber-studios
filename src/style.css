@@ -191,3 +191,9 @@ footer{padding-inline:max(6%,calc((100% - 1440px)/2))}
 /* Keep the entire wall monogram centered within the gallery tile. */
 .studio-detail .gallery-photo img{object-position:center 7%}
 @media(max-width:600px){.studio-detail .gallery-photo{aspect-ratio:1/1}.studio-detail .gallery-photo img{object-position:center 6%}}
+
+/* Site owner requested automatic one-time typing reveals on all devices. */
+@media(prefers-reduced-motion:reduce){
+.typing-active{animation:type-name .85s steps(var(--characters),end) both!important}
+.typing-heading.typing-active{animation-duration:1.1s!important}
+}
